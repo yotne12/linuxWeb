@@ -1,0 +1,99 @@
+Key Terms 
+active partition The partition searched for an operating system after the MBR/GPT. 
+boot loader 
+A program used to load an operating system. 
+chkconfig command 
+A command that can be used to configure UNIX SysV daemon startup by runlevel. 
+Compiz Fusion 
+A window manager that is often used alongside the KDE and GNOME desktops to provide advanced graphical effects.
+daemon 
+A Linux system process that provides a system service. 
+desktop environment 
+The software that works with a window manager to provide a standard GUI environment that uses standard programs and development tools. 
+ELILO 
+A boot loader used with computers that support Intel Extensible Firmware Interface (EFI) technology. 
+GNOME Display Manager (gdm) 
+A program that provides a graphical login screen. 
+GNU Object Model Environment (GNOME) 
+The default desktop environment in Fedora Linux; it was created in 1997. GRand Unified Bootloader (GRUB) 
+A boot loader used to boot a variety of different operating systems (including Linux) on a variety of different hardware platforms. 
+GRand Unified Bootloader version 2 (GRUB2) 
+An enhanced version of the GRUB boot loader. It is the most common boot loader used on modern Linux systems. 
+grub-install command 
+The command used to install the GRUB boot loader. 
+grub2-install command 
+The command used to install the GRUB2 boot loader. 
+grub2-mkconfig command 
+The command used to build the GRUB2 configuration file from entries within the /etc/default/grub file and /etc/grub.d directory. 
+grubby command 
+A command that can be used to configure the LILO, GRUB and GRUB2 boot loaders. 
+GRUB root partition 
+The partition containing the second stage of the GRUB boot loader and the GRUB configuration file. 
+GTK+ toolkit 
+A development toolkit for C programming; it is used in the GNOME desktop and the GNU Image Manipulation Program (GIMP). 
+init command 
+A UNIX SysV command used to change the operating system from one runlevel to another. 
+initialize (init) daemon 
+The first process started by the Linux kernel; it is responsible for starting and stopping other daemons. 
+initstate See runlevel. 
+K Desktop Environment (KDE) 
+A desktop environment created by Matthias Ettrich in 1996. 
+KDE Display Manager (kdm) 
+A graphical login screen for users that resembles the KDE desktop.
+K Window Manager (kwin) 
+The window manager that works under the KDE Desktop Environment. 
+lilo command 
+The command used to reinstall the LILO boot loader based on the configuration information in /etc/lilo.conf. 
+Linux Loader (LILO) 
+A common boot loader used on legacy Linux systems. 
+multi boot 
+A configuration in which two or more operating systems exist on the hard disk of a computer; the boot loader allows the user to choose which operating system to load at boot time. 
+mutter window manager 
+The default window manager for the GNOME Desktop Environment in Fedora 13. 
+Power On Self Test (POST) 
+An initial series of tests run when a computer is powered on to ensure that hardware components are functional.
+Qt toolkit 
+The software toolkit used with the K Desktop Environment. 
+restart command 
+A command that can be used to manually restart an upstart daemon. runlevel A UNIX SysV 
+term that defines a certain type and number of daemons on a Linux system. 
+runlevel command 
+The command used to display the current and most recent (previous) runlevel. 
+runtime configuration (rc) 
+scripts Scripts that are used during the system initialization process to start daemons and provide system functionality. 
+service command 
+A command that can be used to manually start, stop, and restart UNIX SysV daemons. 
+service unit A Systemd 
+term that is used to describe a daemon. 
+start command 
+A command that can be used to manually start an upstart daemon. 
+stop command 
+A command that can be used to manually stop an upstart daemon. 
+systemctl command 
+A command that can be used to manually start, stop and restart Systemd daemons, as well as configure Systemd daemon startup during the system initialization process. 
+system-config-keyboard command 
+A command used on Fedora Linux systems to configure a keyboard for use by X Windows. 
+Systemd A relatively new software framework used on Linux systems that provides a system initialization process and system management functions. 
+system initialization process 
+The process that executes the daemons that provide for system services during boot time and bring the system to a usable state. 
+target See target unit. 
+target unit 
+A Systemd term that is used to describe the number and type of daemons running on a Linux system. It is functionally equivalent to the UNIX SysV term runlevel. 
+telinit command 
+A UNIX SysV command used to change the operating system from one runlevel to another. 
+update-rc.d command 
+A command that can be used to configure UNIX SysV daemon startup by runlevel on Ubuntu Linux systems. 
+upstart 
+A recent version of the UNIX SysV system initialization process used on modern Linux distributions.
+windows
+UNIX SysV A UNIX standard that is used to provide the structure of the system initialization process on Linux systems. 
+window manager 
+The GUI component that is responsible for determining the appearance of the windows drawn on the screen by X Windows. 
+X client 
+The component of X Windows that requests graphics to be drawn from the X server and displays them on the terminal screen. 
+X Display Manager (xdm) 
+A graphical login screen. 
+XFree86 
+A common implementation of X Windows used in Linux distributions. X.org 
+ 
+ 

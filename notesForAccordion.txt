@@ -1,0 +1,14 @@
+I could not  get the accordion to size per the length of the content.  It took the largest panel and expanded out of the viewable
+area.  
+The jquery $ needed an argument that would tell the accordion to size according to it's content in each panel.  The new parameter had to be enclosed in parenthesis ({}).  Without the parenthesis you negate the whole function.
+$(function() {
+	$( "#Accordion1" ).accordion({heightStyle: "content"})
+});
+heightStyle: provide the solutiong.
+There are several other parameters that can be used to but I could not get the immediate close parameter to work.
+More parameters tested:
+Open with all panels closed.
+$(function() {
+	$( "#Accordion1" ).accordion({ heightStyle: "content",active: false, collapsible: true})
+});
+To get this to work you have to set the accordion to active: false AND collapsible: true

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="menu to div fill with new page">
+  <meta name="keywords" content="HTML,CSS,JQUERY, Stephen Jennings, load function, id, scrollable menu">
+  <meta name="author" content="Stephen Jennings">
+<title>Click menu links and external page fills div in same page</title>
+	
+	
+<link href="css.css" rel="stylesheet" type="text/css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	
+	<script>
+$(function () {
+    $("#about").on("click", function () {
+        $("#result").load("pages/about.html");
+    });
+    $("#nav_page_b").on("click", function () {
+        $("#community").load("pages/community.html");
+    });
+});
+</script>
+	
+	
+</head>
+
+<body>
+	<div id = "main">
+	<div id = "header">
+		<p id = "htwo">Dynamic div reload from sidebar menu</p>
+				<p id ="sub">Version one, November 6, 2018, see notes</p>
+	 </div>
+	<div id = "menu">
+	<ul>
+	<li><a id="about" href="#">About</a></li>
+	<li><a id="community" href="#">Community</a></li>
+	
+</ul>
+	
+	
+	</div>	
+	<div id = "result">
+	
+		
+	
+	</div>
+	
+	</div>
+	
+</body>
+</html>

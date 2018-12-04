@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<body>
+<p>man bash</p>
+<p>info bash</p>
+<p>Bash Reference Manual: The Set Builtin</p>
+<h3>Assembly in Fedora Linux</h3>
+<p><strong>Tutorial using GAS linux</strong></p>
+<ul>
+  <li>Build assembly program with .s extension for 64 bit windows using gcc gas</li>
+</ul>
+	
+<pre># ----------------------------------------------------------------------------------------<br># Writes "Hello, World" to the console using only system calls. Runs on 64-bit Linux only.<br># To assemble and run:<br>#<br>#     gcc -c hello.s &amp;&amp; ld hello.o &amp;&amp; ./a.out<br>#<br># or<br>#<br>#     gcc -nostdlib hello.s &amp;&amp; ./a.out<br># ----------------------------------------------------------------------------------------<br><br>        .global _start<br><br>        .text<br>_start:<br>        # write(1, message, 13)<br>        mov     $1, %rax                # system call 1 is write<br>        mov     $1, %rdi                # file handle 1 is stdout<br>        mov     $message, %rsi          # address of string to output<br>        mov     $13, %rdx               # number of bytes<br>        syscall                         # invoke operating system to do the write<br><br>        # exit(0)<br>        mov     $60, %rax               # system call 60 is exit<br>        xor     %rdi, %rdi              # we want return code 0<br>        syscall                         # invoke operating system to exit<br>message:<br>        .ascii  "Hello, world\n"</pre>
+<ul>
+	<li>This line compiles to object code and then runs it.</li>
+	<li> gcc -c hello.s && ld hello.o && ./a.out</li>
+	
+	<li></li>
+	<li></li>
+</ul>
+<h3>GCC compiler</h3>
+	<ul>
+	<li>C  interpreter ... check version gcc --version</li>
+	<li>gcc first.c -o first-c</li>
+	<li>./first-c</li>
+	</ul>
+	<h3>Professor Auyueng </h3>
+	<p>youtube.com/someprofs....310 20180827 is title/date format for assembly</p>
+	<p>Syllabus</p>
+<p>Physical states, truth, numbers and computers</p>
+	<p>logisim is the logic simulator</p>
+	<p>A electro-mechanical device is one that uses electricity to physically actuate/move contacts. A motero drives a rotor. On each rotor are contact points at different rotational positions.	 The rotor then connects different electrical contact points on the stator. A electro-mechanical computer is extremely bulky due to the use of rotors, plug boards and motors. The use of motors (to cchange state by changing the rotational state of rotors) is also very slow compared to other mechanixms. However, give the right circumstances, a elector-mechanical computer can be worthwile. At the endo WW@, German Enigma encryption machines received a fouth wheel to scramble broadcast communication. This made the previous manual deciphering method no loger effective. The bombe computer was devised to semi-automate the deciphering process. Despite being on of the slowest mechanisms, electro-mechanical bombe proved to be effective against the Enigma encryption machines.</p>
+	<p>Get enigma kit.</p>
+	<p>Generating a circuit from Logisim. www.cburch.com/logisim/docs/2.5.0/en/guide/analyze/gen.html </p>
+	<h3>GCC printf example program 64 bit Fedora</h3>
+	<p>#include &lt;stdio.h&gt;//it is a header file which contains printf library<br>
+	  int main()<br>
+	  {<br>
+	  char ch;<br>
+	  char str[100];<br>
+	  printf(&quot;Enter a char \n&quot;);<br>
+    scanf(&quot;%c&quot;, &amp;ch);</p>
+	<p>printf(&quot;Entered character as: %c \n&quot;, ch);</p>
+	<p>return(0);</p>
+	<p>}</p>
+
+	
+	
+<h3>Bash version and Shell Prompt</h3>
+<ul>
+  <li>sh</li>
+	<li>sh-4.4$
+	</li>
+</ul>
+<h3>calendar, date, ifconfig at terminal...these are built in commands</h3>
+	<ul>
+	<li>cal</li>
+		<li>date</li>
+		<li>ifconfig</li>
+	</ul>
+<h3>Echo Hello World</h3>
+<ul>
+<li>#!/bin/bash</li>
+<li>echo &quot;Hello world&quot;;</li>
+<li>echo Hello world;</li>
+</ul>
+<h3>Set permission so the program can run</h3>
+<h3>$USER variable</h3>
+<ul>
+	<li>#!/bin/bash</li>
+	<li>echo &quot;Hello $USER&quot;;</li>
+	<li>Hello steve</li>
+	
+	</ul>	
+	<h3>Working with variables</h3>
+	
+	<ul>
+	<li>v = "Hello $USER";</li>
+		<li>echo $v;</li>
+	</ul>
+</body>
+</html>

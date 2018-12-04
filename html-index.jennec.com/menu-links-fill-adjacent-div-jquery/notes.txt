@@ -1,0 +1,8 @@
+November 6, 2018, version one
+This page loads dynamic content from sidebar menu link to ajacent div.
+This page uses jquery load function.
+Each function represents one link.  This could be done by passing a variable instead of passing the unique id which demands a function for each id.
+page needs versioning for production.
+this is also a main wrap, heading clearing two columns.
+Column one is the sidebar menu and column two is the target for the new page.
+This is a good solution for heading text positioning.

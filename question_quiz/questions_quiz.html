@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>questions_quiz</title>
+</head>
+
+<body>
+<p>Linux Administration</p>
+<p>Chapter Three questions_quiz</p>
+<p>Pending topics that need clairfication or further Study:</p>
+<ul>
+	<li ><a href = "#bg">& metacharacter</a></li>
+</ul>
+<p><br>
+</p>
+<ol>
+  <li>What is a metacharacter in Linux? A metacharacter is a keyboard character like a $ or ~ that has special meaning beyound the printed character. The $ sign tells you that the subsequeunt word is a variable. Ex. $var.  In the case of the ~ an action is performed because a ~ at the command line will will direct the shell to put you in the /home/steve directory or home directory.</li>
+  <li>To understand metacharacters you have to practice with their meaning. Below is an image of the most common metacharacter. Give an example of the use/interpretation of each one of them. <br>
+  </li><ul><li>
+	<img src = "../images/metaCharacters.JPG"></img></li>
+    <li>Example: echo $SHELL ... /bin/bash. Therefore is is a variable for the location of the bash shell currently used in Fedora.</li>
+    <li>Example: echo ~ ...returns /home/steve and if I use just ... ~ ... then I get .... &quot;bash: /home/steve: Is a directory&quot;</li>
+    <li>Example: The <strong id = "bg">&</strong>; is bettter explained in context of other commands. What does [count &amp;] return:.  <img src="../images/count_&.JPG" width="496" height="115" alt=""/> .... note it does not return to the command prompt. States count is not found but with the [control c] exits the  count job. This is confusing. First you start the [count &amp;] and it states a 1 with a id number of 4255. Next I [control c] and it exist with a [1]+ Exit 127</li>
+    <li>Example:  [;] this metacharacter just simply terminates a command</li>
+    <li>Example: &lt; &lt;&lt; &gt; &gt;&gt; ... Lets start with the &gt; example. We will take the [who] and use redirection to send it to the me file. ... note the the output. If I use the &gt; metacharacter again to the same file it will overwrite the file. To append to a file use the [&gt;&gt;]...  <img src="../images/append.JPG" width="307" height="167" alt=""/>...note the process list and then the result of the [whoami].  Next is the other direction....&lt; will send the file contents to a command that will act on the contents and then send to the shell output. Ex. Lets try [&lt; ] which I will use to send the file contents to a command [wc]. wc in lower case word counts the contents of the file sends it to a file in list form.<img src="../images/leftRedirection.JPG" width="417" height="98" alt=""/> I sent the results of the who command to a file that was created &quot;meone&quot;. I catted it to output to confirm. Then I redirected the file to the wc -l with list option and it listed the number of lines to output. You can still get the same result with more information. The difference is that when you use the [&lt;] it only sees that it is reading input from the file and doesn't even concern itself as to where it is coming from: Compare the output from these two images: <img src="../images/leftRedirectComparison.JPG" width="305" height="62" alt=""/> See how you actually get more information &quot;the file name&quot; when you don't use the &lt; command. It also explains the nuance of these redirection commands.</li>
+    <li>Example command piping [|]..pipes output of one command to another command for processing. We have a command ls -l which list the directories. Now to use the pipe command we set this up: ls -l | more. This takes the list of those directories and inputs them to the [more] command which list them all on one page.</li>
+    <li>Shell wild cards [*], [?], [{}] and the [[]] example of using the wildcard * [grep th* me]grep get text that starts with th and any character or number after it.<br>
+      <br>
+      <br>
+      <br>
+      <p>Linux Administration</p>
+      <p>Chapter Three questions_quiz</p>
+      <p>Pending topics that need clairfication or further Study:</p>
+      <ul>
+        <li ><a href = "#bg">& metacharacter</a></li>
+      </ul>
+      <p><br>
+      </p>
+      <ol>
+        <li>What is a metacharacter in Linux? A metacharacter is a keyboard character like a $ or ~ that has special meaning beyound the printed character. The $ sign tells you that the subsequeunt word is a variable. Ex. $var.  In the case of the ~ an action is performed because a ~ at the command line will will direct the shell to put you in the /home/steve directory or home directory.</li>
+        <li>To understand metacharacters you have to practice with their meaning. Below is an image of the most common metacharacter. Give an example of the use/interpretation of each one of them. <br>
+        </li>
+        <ul>
+          <li> <img src = "../images/metaCharacters.JPG"></img></li>
+          <li>Example: echo $SHELL ... /bin/bash. Therefore is is a variable for the location of the bash shell currently used in Fedora.</li>
+          <li>Example: echo ~ ...returns /home/steve and if I use just ... ~ ... then I get .... &quot;bash: /home/steve: Is a directory&quot;</li>
+          <li>Example: The <strong id = "bg2">&</strong>; is bettter explained in context of other commands. What does [count &amp;] return:. <img src="../images/count_&.JPG" width="496" height="115" alt=""/> .... note it does not return to the command prompt. States count is not found but with the [control c] exits the  count job. This is confusing. First you start the [count &amp;] and it states a 1 with a id number of 4255. Next I [control c] and it exist with a [1]+ Exit 127</li>
+          <li>Example:  [;] this metacharacter just simply terminates a command</li>
+          <li>Example: &lt; &lt;&lt; &gt; &gt;&gt; ... Lets start with the &gt; example. We will take the [who] and use redirection to send it to the me file. ... note the the output. If I use the &gt; metacharacter again to the same file it will overwrite the file. To append to a file use the [&gt;&gt;]... <img src="../images/append.JPG" width="307" height="167" alt=""/>...note the process list and then the result of the [whoami].  Next is the other direction....&lt; will send the file contents to a command that will act on the contents and then send to the shell output. Ex. Lets try [&lt; ] which I will use to send the file contents to a command [wc]. wc in lower case word counts the contents of the file sends it to a file in list form.<img src="../images/leftRedirection.JPG" width="417" height="98" alt=""/> I sent the results of the who command to a file that was created &quot;meone&quot;. I catted it to output to confirm. Then I redirected the file to the wc -l with list option and it listed the number of lines to output. You can still get the same result with more information. The difference is that when you use the [&lt;] it only sees that it is reading input from the file and doesn't even concern itself as to where it is coming from: Compare the output from these two images: <img src="../images/leftRedirectComparison.JPG" width="305" height="62" alt=""/> See how you actually get more information &quot;the file name&quot; when you don't use the &lt; command. It also explains the nuance of these redirection commands.</li>
+          <li>Example command piping [|]..pipes output of one command to another command for processing. We have a command ls -l which list the directories. Now to use the pipe command we set this up: ls -l | more. This takes the list of those directories and inputs them to the [more] command which list them all on one page.</li>
+          <li>Shell wild cards [*], [?], [{}] and the [[]] example of using the wildcard * [grep th* me]grep get text that starts with th and any character or number after it.<br>
+          </li>
+        </ul>
+      </ol>
+<br>
+    </li>
+  </ul>
+</ol>
+
+<p>Chapter Four questions_quiz</p>
+<p>Pending topics that need clairfication or further Study:</p>
+<ol>
+
+<li></li>
+
+</ol>
+
+</body>
+</html>

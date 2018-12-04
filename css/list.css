@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+}
+.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited, .ui-state-focus a, .ui-state-focus a:hover, .ui-state-focus a:link, .ui-state-focus a:visited {
+    background-image: -webkit-linear-gradient(270deg,rgba(162,160,148,1.00) 0%,rgba(179,154,154,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(162,160,148,1.00) 0%,rgba(179,154,154,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(162,160,148,1.00) 0%,rgba(179,154,154,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(162,160,148,1.00) 0%,rgba(179,154,154,1.00) 100%);
+}
