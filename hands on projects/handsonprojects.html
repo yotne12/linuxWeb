@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h3>Chapter Seven</h3>
+<p>Hands-on Projects </p>
+<p>Project 7-1 </p>
+<p>In this hands-on project, you use the shell to redirect the Standard Output and Standard Error to a file and take Standard Input from a file. </p>
+<p>1. Boot your Fedora Linux virtual machine. After your Linux system has been loaded, switch to a command-line terminal (tty2) by pressing Ctrl+Alt+F2 and log in to the terminal using the user name of root and the password of LNXrocks!.&nbsp; cntrl + alt + f3 works for new terminal and ctrl + alt + f1 returns to gui</p>
+<p>2. At the command prompt, type touch sample1 sample2 and press Enter to create two new files named sample1 and sample2 in your home directory. Verify their creation by typing ls–F at the command prompt, and press Enter. okl</p>
+<p>3. At the command prompt, type ls -l sample1 sample2 sample3 and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why? sample3 does not exist therefore "ls: cannot access 'sample3': No such file or directory"</p>
+<p>4. At the command prompt, type ls -l sample1 sample2 sample3 &gt; file and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why?&nbsp; Sample3 file did not exist therefore the error code "ls: cannot access 'sample3' : No such file or directory"&nbsp; </p>
+<p>5. At the command prompt, type cat file and press Enter. What are the contents of the file and why?&nbsp; &nbsp;The redirect to file created named&nbsp; "file" that contains the inode (attributes) of the file from left to right ... permissions, number 1 which means no other file references&nbsp; that file (if it had a number 2 means that it has another file reference), root owner, user owner (steve), filesize, day of month, time and filename.&nbsp; There is one line for each file.&nbsp; </p>
+<p>6. At the command prompt, type ls -l sample1 sample2 sample3 2&gt;file and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why?&nbsp; no,&nbsp; just the file attribute lines... Standard error was redirected to "file" because it was given the descriptor 2 to redirect standard error only to file.</p>
+<p>7. At the command prompt, type cat file and press Enter. What are the contents of the file and why? Were the previous contents retained? Why? No, a new error code was redirected to file.</p>
+<p>8. At the command prompt, type ls -l sample1 sample2 sample3 &gt; file 2&gt;file2 and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why?&nbsp; No standard output was redirected to file and standard error by the discriptor was redirected to file2</p>
+<p>9. At the command prompt, type cat file and press Enter. What are the contents of the file and why? standard output sample1 and sample2</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>10. At the command prompt, type cat file2 and press Enter. What are the contents of file2 and why?&nbsp;&nbsp;Standard error was redirected to file, ls: cannot access 'sample3' : No such file or directory</p>
+<p>&nbsp;</p>
+<p>11. At the command prompt, type ls -l sample1 sample2 sample3 &gt; file 2&gt; &amp;1 and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why?&nbsp; Both error message and output is redirected to the same file.&nbsp; No output is displayed since it is redirected to file</p>
+<p>12. At the command prompt, type cat file and press Enter. What are the contents of the file and why? </p>
+<p>13. At the command prompt, type ls -l sample1 sample2 sample3 &gt; &amp;2 2&gt;file2 and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why? </p>
+<p>14. At the command prompt, type cat file2 and press Enter. What are the contents of file2 and why?</p>
+<p> 15. At the command prompt, type date &gt;&gt; file and press Enter. </p>
+<p>16. At the command prompt, type cat file and press Enter. What are the contents of the file and why? </p>
+<p>17. At the command prompt, type date &gt;&gt; file and press Enter. </p>
+<p>18. At the command prompt, type cat file and press Enter. What are the contents of the file and why? Can you tell when each date command was run? </p>
+<p>19. At the command prompt, type tr o O /etc/hosts and press Enter. What error message do you receive and why? </p>
+<p>20. At the command prompt, type tr o O &lt;/etc/hosts and press Enter. What happened and why? </p>
+<p>21. Type exit and press Enter to log out of your shell. </p>
+</body>
+</html>
