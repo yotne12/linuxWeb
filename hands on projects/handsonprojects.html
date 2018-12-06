@@ -28,15 +28,27 @@
 <p>10. At the command prompt, type cat file2 and press Enter. What are the contents of file2 and why?&nbsp;&nbsp;Standard error was redirected to file, ls: cannot access 'sample3' : No such file or directory</p>
 <p>&nbsp;</p>
 <p>11. At the command prompt, type ls -l sample1 sample2 sample3 &gt; file 2&gt; &amp;1 and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why?&nbsp; Both error message and output is redirected to the same file.&nbsp; No output is displayed since it is redirected to file</p>
-<p>12. At the command prompt, type cat file and press Enter. What are the contents of the file and why? </p>
-<p>13. At the command prompt, type ls -l sample1 sample2 sample3 &gt; &amp;2 2&gt;file2 and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why? </p>
-<p>14. At the command prompt, type cat file2 and press Enter. What are the contents of file2 and why?</p>
-<p> 15. At the command prompt, type date &gt;&gt; file and press Enter. </p>
-<p>16. At the command prompt, type cat file and press Enter. What are the contents of the file and why? </p>
-<p>17. At the command prompt, type date &gt;&gt; file and press Enter. </p>
-<p>18. At the command prompt, type cat file and press Enter. What are the contents of the file and why? Can you tell when each date command was run? </p>
-<p>19. At the command prompt, type tr o O /etc/hosts and press Enter. What error message do you receive and why? </p>
-<p>20. At the command prompt, type tr o O &lt;/etc/hosts and press Enter. What happened and why? </p>
+<p>12. At the command prompt, type cat file and press Enter. What are the contents of the file and why? "file" contains both standard error message and standard output</p>
+<p>13. At the command prompt, type ls -l sample1 sample2 sample3 &gt; &amp;2 2&gt;file2 and press Enter. Is there any Standard Output displayed on the terminal screen? Is there any Standard Error displayed on the terminal screen? Why? yes and no standard error shown on the screen</p>
+<p>14. At the command prompt, type cat file2 and press Enter. What are the contents of file2 and why? standard error code was redirected to file2</p>
+<p> 15. At the command prompt, type date &gt;&gt; file and press Enter . </p>
+<p>16. At the command prompt, type cat file and press Enter. What are the contents of the file and why? Date was appended to the file after it's contents.</p>
+<p>17. At the command prompt, type date &gt;&gt; file and press Enter.</p>
+<p>18. At the command prompt, type cat file and press Enter. What are the contents of the file and why? Can you tell when each date command was run?&nbsp; Another date and timestamp was appended to the file.&nbsp; Yes the timestamp was included with the date.</p>
+<p>19. At the command prompt, type tr o O /etc/hosts and press Enter. What error message do you receive and why?&nbsp; standard error output Extra operand</p>
+<p>20. At the command prompt, type tr o O &lt;/etc/hosts and press Enter. What happened and why? all small o's were translated to large O in /etc/hosts</p>
 <p>21. Type exit and press Enter to log out of your shell. </p>
+<p>&nbsp;</p>
+<p>Project 7-2 In this hands-on project, you redirect Standard Output and Standard Input using pipe metacharacters. </p>
+<p>1. Switch to a command-line terminal (tty2) by pressing Ctrl+Alt+F2 and log in to the terminal using the user name of root and the password of LNXrocks!. </p>
+<p>2. At the command prompt, type cat /etc/nsswitch.conf and press Enter to view the /etc/ nsswitch.conf file. Next, type cat /etc/nsswitch.conf | less at the command prompt and press Enter to perform the same task page-by-page. Explain what the | metacharacter does in the previous Command.&nbsp; How is this different from the less&nbsp; /etc/nsswich.conf command?</p>
+<p>3. At the command prompt, type cat /etc/nsswitch.conf | grep nisplus and press Enter. How many lines are displayed? Why did you not need to specify a filename with the grep command? </p>
+<p>4. At the command prompt, type cat /etc/nsswitch.conf | grep nisplus | tr n N and press Enter. Explain the output on the terminal screen. </p>
+<p>5. At the command prompt, type cat /etc/nsswitch.conf | grep nisplus | tr n N | sort–r and press Enter. Explain the output on the terminal screen. </p>
+<p>6. At the command prompt, type cat /etc/nsswitch.conf | grep nisplus | tr n N | sort–r | tee file and press Enter. Explain the output on the terminal screen. Next, type cat file at the command prompt and press Enter. What are the contents? Why? What does the tee command do in the pipe above? </p>
+<p>7. At the command prompt, type cat /etc/nsswitch.conf | grep nisplus | tr n N | sort–r | tee file | wc–l and press Enter. Explain the output on the terminal screen. Next, type cat file at the command prompt and press Enter. What are the contents and why? </p>
+<p>8. At the command prompt, type cat /etc/nsswitch.conf/ | grep nisplus | sed /#/d | sed /public/s/nisplus/NISPLUS/ and press Enter. Explain the output on the terminal screen. Can this output be obtained with the grep and tr commands instead of sed ? </p>
+<p>9. At the command prompt, type cat /etc/hosts. Next, type cat /etc/hosts | awk 0 /localhost/ {print $1, $3}’and press Enter. Explain the output on the terminal screen. </p>
+<p>10. Type exit and press Enter to log out of your shell.</p>
 </body>
 </html>
